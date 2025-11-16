@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 11px;
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+    }
+    
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    body {
+      background-color: hsl(185, 75%, 39%);
+      text-align: center;
+      font-family: Kumbh Sans, Arial;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .name,
+    .stats {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .details {
+      font-size: 12px;
+      color: hsl(227, 10%, 46%);
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+
+    .age {
+      color: hsl(227, 10%, 46%);
+      font-size: 18px;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .city {
+      color: hsl(227, 10%, 46%);
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    .self-details {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .profile-pic img{
+      width: 100px;
+      height: 100px;
+      border: 5px solid white;
+      border-radius: 50%;
+      margin-top: -50px;
+      margin-bottom: 17px;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .top-design img {
+      width: 100%;
+      display: block;
+    }
+
+    .info-container {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid hsl(227, 10%, 46%, 0.3);
+    }
+
+    .bg-shape {
+      width: 120vw;
+      position: absolute;
+      height: auto;
+      z-index: -1;
+    }
+
+    .top-left {
+      top: -15%;
+      left: -70%;
+    }
+
+    .bottom-right {
+      bottom: -15%;
+      right: -70%;
+    }
+
+    @media (min-width: 600px) {
+      .bg-shape {
+        width: 50vw;
+      }
+
+      .top-left {
+        top: -55%;
+        left: -20%;
+      }
+
+      .bottom-right {
+        bottom: -55%;
+        right: -20%;
+      }     
+    }
+
+    @media (min-width: 1440px) {
+      .bg-shape {
+        width: 100vw;
+        max-width: 800px;
+      }
+
+    .top-left {
+      top: -40%;
+      left: -10%;
+    }
+
+    .bottom-right {
+      bottom: -40%;
+      right: -10%;
+    }
+    }
+  </style>
+</head>
+<body>
+  <img class="bg-shape top-left" src="./images/bg-pattern-top.svg" alt="Top background design">
+  <img class="bg-shape bottom-right" src="./images/bg-pattern-bottom.svg" alt="Bottom background design">
+  
+  <div class="card-container">
+    <div class="card">
+      <div class="top-design">
+        <img src="./images/bg-pattern-card.svg" alt="Top design">
+      </div>
+      <div class="profile-pic">
+        <img src="./images/image-victor.jpg" alt="Profile Picture">
+      </div>
+      <div class="self-details">
+        <div class="identity">
+          <p class="name">Victor Crest <span class="age">26</span></p>
+        </div>
+        <div class="city-container">
+          <p class="city">London</p>
+        </div>
+      </div>
+      <div class="info-container">
+        <div class="info">
+          <p class="stats">80K</p>
+          <p class="details">Followers</p>
+        </div>
+        <div class="info">
+          <p class="stats">803K</p>
+          <p class="details">Likes</p>
+        </div>
+        <div class="info">
+          <p class="stats">1.4K</p>
+          <p class="details">Photos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Maher Wahid</a>.
+  </div>
+</body>
+</html>
